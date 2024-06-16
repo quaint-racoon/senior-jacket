@@ -87,22 +87,7 @@
 
         }
 
-        .cursor {
-
-            position: fixed;
-
-            width: 25px;
-
-            height: 25px;
-
-            background: url('custom_cursor.png') no-repeat center center;
-
-            pointer-events: none;
-
-            z-index: 9999;
-
-        }
-
+        
         @keyframes spin {
 
             0% { transform: rotate(0deg); }
@@ -148,25 +133,6 @@
 
     <img src="comet_icon.png" class="floating-icon" style="top: 80%; left: 30%;" alt="Floating Comet">
 
-    <!-- Custom Cursor -->
-
-    <div class="cursor" id="customCursor"></div>
-
-    <script>
-
-        // Custom cursor
-
-        document.addEventListener('mousemove', function(e) {
-
-            let cursor = document.getElementById('customCursor');
-
-            cursor.style.left = e.pageX + 'px';
-
-            cursor.style.top = e.pageY + 'px';
-
-        });
-
-    </script>
 
 </body>
 
