@@ -1,1 +1,172 @@
-welcome to my senior jacket page!!!
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Space Themed Website</title>
+
+    <style>
+
+        body {
+
+            margin: 0;
+
+            padding: 0;
+
+            overflow: hidden;
+
+            background: url('space_background.jpg') no-repeat center center fixed;
+
+            background-size: cover;
+
+            font-family: 'Arial', sans-serif;
+
+            color: #fff;
+
+        }
+
+        .container {
+
+            text-align: center;
+
+            margin-top: 100px;
+
+        }
+
+        .bio {
+
+            font-size: 24px;
+
+            margin-bottom: 30px;
+
+        }
+
+        .social-icons a {
+
+            margin: 0 10px;
+
+            display: inline-block;
+
+        }
+
+        .social-icons img {
+
+            width: 40px;
+
+            transition: transform 0.3s ease;
+
+        }
+
+        .social-icons img:hover {
+
+            transform: scale(1.2);
+
+        }
+
+        .floating-icon {
+
+            position: absolute;
+
+            animation: float 10s infinite ease-in-out;
+
+        }
+
+        @keyframes float {
+
+            0% { transform: translateY(0); }
+
+            50% { transform: translateY(-20px); }
+
+            100% { transform: translateY(0); }
+
+        }
+
+        .cursor {
+
+            position: fixed;
+
+            width: 25px;
+
+            height: 25px;
+
+            background: url('custom_cursor.png') no-repeat center center;
+
+            pointer-events: none;
+
+            z-index: 9999;
+
+        }
+
+        @keyframes spin {
+
+            0% { transform: rotate(0deg); }
+
+            100% { transform: rotate(360deg); }
+
+        }
+
+        .floating-icon.spin {
+
+            animation: spin 20s infinite linear;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Welcome to My Space!</h1>
+
+        <p class="bio">Hi, I'm [Your Name]. Welcome to my portfolio!</p>
+
+        <div class="social-icons">
+
+            <a href="https://snapchat.com/yourprofile" target="_blank"><img src="snapchat_icon.png" alt="Snapchat"></a>
+
+            <a href="https://discord.com/yourprofile" target="_blank"><img src="discord_icon.png" alt="Discord"></a>
+
+            <a href="https://instagram.com/yourprofile" target="_blank"><img src="instagram_icon.png" alt="Instagram"></a>
+        </div>
+
+    </div>
+
+    <!-- Floating Icons -->
+
+    <img src="planet_icon.png" class="floating-icon" style="top: 20%; left: 10%;" alt="Floating Planet">
+
+    <img src="star_icon.png" class="floating-icon spin" style="top: 50%; left: 80%;" alt="Floating Star">
+
+    <img src="comet_icon.png" class="floating-icon" style="top: 80%; left: 30%;" alt="Floating Comet">
+
+    <!-- Custom Cursor -->
+
+    <div class="cursor" id="customCursor"></div>
+
+    <script>
+
+        // Custom cursor
+
+        document.addEventListener('mousemove', function(e) {
+
+            let cursor = document.getElementById('customCursor');
+
+            cursor.style.left = e.pageX + 'px';
+
+            cursor.style.top = e.pageY + 'px';
+
+        });
+
+    </script>
+
+</body>
+
+</html>
