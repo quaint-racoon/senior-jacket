@@ -7,10 +7,6 @@
     <title>My Space lolz</title>
 
     <style>
-        html {
-            font-size: 16px; /* Base font size for rem units */
-        }
-
         body {
             margin: 0;
             padding: 0;
@@ -29,82 +25,83 @@
         .container {
             z-index: 1;
             text-align: center;
-            text-shadow: 0.25rem 0.25rem 0.625rem rgba(0, 0, 0, 1);
+            text-shadow: 4px 4px 10px rgba(0, 0, 0, 1);
             background: radial-gradient(rgba(0, 0, 0, 0.6) 0%, transparent 75%);
+            padding: 1rem;
+            width: 90%;
+            box-sizing: border-box;
         }
 
         .card-menu {
-    width: 45rem; /* Width set in rem */
-    background: grey;
-    margin: 3.125rem; /* Margin set in rem */
-    border-radius: 0.625rem; /* Border radius in rem */
-    padding: 0.9375rem; /* Padding set in rem */
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-}
+            width: 100%;
+            background: grey;
+            margin: 1rem 0;
+            border-radius: 0.625rem;
+            padding: 0.9375rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
 
-.card {
-    margin: 0.625rem; /* Margin in rem */
-    border-radius: 0.625rem; /* Border radius in rem */
-    background: #282828;
-    width: calc(50% - 1.25rem); /* Half width with spacing accounted */
-    height: 6rem; /* Fixed height for the cards */
-    padding: 0.5rem; /* Padding in rem */
-    box-sizing: border-box;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    text-align: left;
-    overflow: hidden;
-}
+        .card {
+            margin: 0.625rem;
+            border-radius: 0.625rem;
+            background: #282828;
+            width: calc(100% - 1.25rem);
+            height: 6rem;
+            padding: 0.5rem;
+            box-sizing: border-box;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            text-align: left;
+            overflow: hidden;
+        }
 
-.card-image {
-    height: 100%;
-    width: auto;
-    max-width: 35%;
-    border-radius: 0.625rem 0 0 0.625rem; /* Rounded left corners */
-}
+        .card-image {
+            height: 100%;
+            width: auto;
+            max-width: 35%;
+            border-radius: 0.625rem 0 0 0.625rem;
+        }
 
-.card-content {
-    padding-left: 0.5rem; /* Reduced space between image and content */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 65%;
-}
+        .card-content {
+            padding-left: 0.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 65%;
+        }
 
-.card h2 {
-    font-size: 1rem; /* Smaller title font size in rem */
-    margin: 0.25rem 0; /* Smaller margin around the title */
-}
+        .card h2 {
+            font-size: 1rem;
+            margin: 0.25rem 0;
+        }
 
-.card p {
-    font-size: 0.75rem; /* Smaller description font size in rem */
-    margin: 0.25rem 0; /* Smaller margin around the paragraph */
-}
-
+        .card p {
+            font-size: 0.75rem;
+            margin: 0.25rem 0;
+        }
 
         .bio {
-            font-size: 3.125rem; /* Bio font size in rem */
-            margin-bottom: 1.875rem; /* Margin bottom in rem */
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
         }
 
         .quote {
-            font-size: 1.5rem; /* Quote font size in rem */
+            font-size: 1rem;
             font-style: italic;
-            margin-bottom: 3.125rem; /* Margin bottom in rem */
+            margin-bottom: 2rem;
         }
 
         .social-icons a {
-            margin: 0 0.625rem; /* Margin around icons in rem */
+            margin: 0 0.625rem;
             display: inline-block;
         }
 
         .social-icons img {
             border-radius: 50%;
-            width: 3.75rem; /* Icon width in rem */
+            width: 2.5rem;
             transition: transform 0.3s ease;
         }
 
@@ -115,7 +112,7 @@
         .floating-icon {
             position: absolute;
             animation: float 10s infinite ease-in-out;
-            width: 5rem; /* Width in rem */
+            width: 3rem;
             z-index: -1;
         }
 
@@ -125,7 +122,7 @@
             }
 
             50% {
-                transform: translateY(-1.25rem); /* Translate in rem */
+                transform: translateY(-20px);
             }
 
             100% {
@@ -146,6 +143,68 @@
         .floating-icon.spin {
             animation: spin 20s infinite linear;
         }
+
+        /* Mobile Optimization */
+        @media (max-width: 768px) {
+            .container {
+                width: 100%;
+                padding: 0.5rem;
+            }
+
+            .bio {
+                font-size: 1.25rem;
+                margin-bottom: 0.75rem;
+            }
+
+            .quote {
+                font-size: 0.875rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .card-menu {
+                margin: 0.5rem 0;
+                padding: 0.5rem;
+            }
+
+            .card {
+                margin: 0.5rem;
+                width: calc(100% - 1rem);
+                height: auto;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .card-image {
+                width: 100%;
+                height: auto;
+                max-width: 100%;
+                border-radius: 0.625rem 0.625rem 0 0;
+            }
+
+            .card-content {
+                width: 100%;
+                padding-left: 0;
+                text-align: center;
+            }
+
+            .card h2 {
+                font-size: 1rem;
+                margin: 0.5rem 0;
+            }
+
+            .card p {
+                font-size: 0.75rem;
+                margin: 0.25rem 0;
+            }
+
+            .social-icons img {
+                width: 2rem;
+            }
+
+            .floating-icon {
+                width: 2rem;
+            }
+        }
     </style>
 </head>
 
@@ -160,34 +219,28 @@
             <a href="https://instagram.com/prly_hashem" target="_blank"><img src="instagram_icon.png" alt="Instagram"></a>
         </div>
     </div>
-
     <div class="card-menu">
         <!-- Card 1 -->
-       <div class="card">
-        <img src="star_icon.png" alt="Card Image 1" class="card-image">
-        <div class="card-content">
-            <h2 style="
-    text-align: center;
-">Card Title 1</h2>
-            <p>This is the description for card 1. It provides some details about the content.</p>
+        <div class="card">
+            <img src="image1.jpg" alt="Card Image 1" class="card-image">
+            <div class="card-content">
+                <h2>Card Title 1</h2>
+                <p>This is the description for card 1. It provides some details about the content.</p>
+            </div>
         </div>
-    </div>
 
         <!-- Card 2 -->
         <div class="card">
-        <img src="star_icon.png" alt="Card Image 2" class="card-image">
-        <div class="card-content">
-            <h2 style="
-    text-align: center;
-">Card Title 1</h2>
-            <p>This is the description for card 2. It provides some details about the content.</p>
+            <img src="image2.jpg" alt="Card Image 2" class="card-image">
+            <div class="card-content">
+                <h2>Card Title 2</h2>
+                <p>This is the description for card 2. It gives an overview of what this card is about.</p>
+            </div>
         </div>
-    </div>
 
-        <!-- Spotify Embed (unchanged) -->
-        <iframe style="padding:0;" class="card" src="https://open.spotify.com/embed/track/0zo4aX57COch7Wh3NRImTM?utm_source=generator&amp;theme=0" height="80" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <!-- Spotify Embed -->
+        <iframe class="card" src="https://open.spotify.com/embed/track/0zo4aX57COch7Wh3NRImTM?utm_source=generator&amp;theme=0" height="80" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     </div>
-
     <!-- Floating Icons -->
     <img src="planet_icon.png" class="floating-icon" style="top: 10%; left: 10%;" alt="Floating Planet">
     <img src="star_icon.png" class="floating-icon spin" style="top: 35%; left: 80%;" alt="Floating Star">
