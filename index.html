@@ -1,194 +1,179 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>My Space lolz</title>
 
     <style>
+        html {
+            font-size: 16px; /* Base font size for rem units */
+        }
 
         body {
-
             margin: 0;
-
             padding: 0;
-
             overflow: hidden;
-
             background: url('space_background.jpg') no-repeat center center fixed;
-
             background-size: cover;
-
             font-family: 'Arial', sans-serif;
-
             color: #fff;
-
             display: flex;
-
             justify-content: center;
-
             align-items: center;
-
             height: 100vh;
-
-            flex-direction:column;
-
+            flex-direction: column;
         }
 
         .container {
-
             z-index: 1;
-            
             text-align: center;
-            
-            text-shadow: 4px 4px 10px rgba(0, 0, 0, 1);
-                
-            background: radial-gradient(rgba(0 , 0, 0 ,0.6) 0%, transparent 75%);
-
+            text-shadow: 0.25rem 0.25rem 0.625rem rgba(0, 0, 0, 1);
+            background: radial-gradient(rgba(0, 0, 0, 0.6) 0%, transparent 75%);
         }
-        .card-menu{
-            
-    width: 45rem;
-    background: grey;
-    margin: 50px;
-    border-radius: 10px;
-    padding: 15px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
 
+        .card-menu {
+            width: 45rem; /* Width set in rem */
+            background: grey;
+            margin: 3.125rem; /* Margin set in rem */
+            border-radius: 0.625rem; /* Border radius in rem */
+            padding: 0.9375rem; /* Padding set in rem */
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-around;
         }
-        .card{
-            margin:10px;
-        		border-radius: 10px;
-        		background: #282828;
-        		height: 80px;
-        		aspect-ratio: 3.75 / 1;
-        		padding: 8px;
-        		box-sizing: border-box;
 
+        .card {
+            margin: 0.625rem; /* Margin in rem */
+            border-radius: 0.625rem; /* Border radius in rem */
+            background: #282828;
+            width: calc(50% - 1.25rem); /* Half width with spacing accounted */
+            padding: 0.5rem; /* Padding in rem */
+            box-sizing: border-box;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
-        
+
+        .card img {
+            border-radius: 0.625rem 0.625rem 0 0; /* Rounded top corners */
+            width: 100%;
+            height: auto;
+            margin-bottom: 0.5rem; /* Margin below the image */
+        }
+
+        .card h2 {
+            font-size: 1.5rem; /* Title font size in rem */
+            margin: 0.5rem 0; /* Margin around the title */
+        }
+
+        .card p {
+            font-size: 1rem; /* Description font size in rem */
+            margin: 0.5rem 0; /* Margin around the paragraph */
+        }
 
         .bio {
-
-            font-size: 50px;
-
-            margin-bottom: 30px;
-
+            font-size: 3.125rem; /* Bio font size in rem */
+            margin-bottom: 1.875rem; /* Margin bottom in rem */
         }
 
         .quote {
-
-            font-size: 24px;
-
+            font-size: 1.5rem; /* Quote font size in rem */
             font-style: italic;
-
-            margin-bottom: 50px;
-
+            margin-bottom: 3.125rem; /* Margin bottom in rem */
         }
 
         .social-icons a {
-
-            margin: 0 10px;
-
+            margin: 0 0.625rem; /* Margin around icons in rem */
             display: inline-block;
-
         }
 
         .social-icons img {
-            border-radius:50%;
-
-            width: 60px;
-
+            border-radius: 50%;
+            width: 3.75rem; /* Icon width in rem */
             transition: transform 0.3s ease;
-
         }
 
         .social-icons img:hover {
-
             transform: scale(1.2);
-
         }
 
         .floating-icon {
-
             position: absolute;
-
             animation: float 10s infinite ease-in-out;
-            width: 5em;
-            
-            z-index:-1;
-
+            width: 5rem; /* Width in rem */
+            z-index: -1;
         }
 
         @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
 
-            0% { transform: translateY(0); }
+            50% {
+                transform: translateY(-1.25rem); /* Translate in rem */
+            }
 
-            50% { transform: translateY(-20px); }
-
-            100% { transform: translateY(0); }
-
+            100% {
+                transform: translateY(0);
+            }
         }
 
         @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
 
-            0% { transform: rotate(0deg); }
-
-            100% { transform: rotate(360deg); }
-
+            100% {
+                transform: rotate(360deg);
+            }
         }
 
         .floating-icon.spin {
-
             animation: spin 20s infinite linear;
-
         }
-
     </style>
-
 </head>
 
 <body>
-
     <div class="container">
-
         <h1>Welcome to My Space!</h1>
-
         <p class="bio">Hi, I'm quaint racoon. Welcome to my portfolio!</p>
-
         <p class="quote">"why fall in love when you can fall asleep."</p>
-
         <div class="social-icons">
-
             <a href="https://snapchat.com/add/prly_hashem" target="_blank"><img src="snapchat_icon.png" alt="Snapchat"></a>
-
             <a href="https://discord.com/users/755851493432754186" target="_blank"><img src="discord_icon.png" alt="Discord"></a>
-
             <a href="https://instagram.com/prly_hashem" target="_blank"><img src="instagram_icon.png" alt="Instagram"></a>
+        </div>
+    </div>
 
+    <div class="card-menu">
+        <!-- Card 1 -->
+        <div class="card">
+            <img src="image1.jpg" alt="Card Image 1">
+            <h2>Card Title 1</h2>
+            <p>This is the description for card 1. It provides some details about the content.</p>
         </div>
 
+        <!-- Card 2 -->
+        <div class="card">
+            <img src="image2.jpg" alt="Card Image 2">
+            <h2>Card Title 2</h2>
+            <p>This is the description for card 2. It gives an overview of what this card is about.</p>
+        </div>
+
+        <!-- Spotify Embed (unchanged) -->
+        <iframe class="card" src="https://open.spotify.com/embed/track/0zo4aX57COch7Wh3NRImTM?utm_source=generator&amp;theme=0" height="80" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     </div>
-<div class="card-menu">
-    <div class="card"></div>
-    <iframe style="pading:0px" class="card" src="https://open.spotify.com/embed/track/0zo4aX57COch7Wh3NRImTM?utm_source=generator&amp;theme=0" height="80" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-</div>
+
     <!-- Floating Icons -->
-
     <img src="planet_icon.png" class="floating-icon" style="top: 10%; left: 10%;" alt="Floating Planet">
-
     <img src="star_icon.png" class="floating-icon spin" style="top: 35%; left: 80%;" alt="Floating Star">
-
     <img src="comet_icon.png" class="floating-icon" style="top: 80%; left: 30%;" alt="Floating Comet">
-
 </body>
 
 </html>
