@@ -34,47 +34,57 @@
         }
 
         .card-menu {
-            width: 45rem; /* Width set in rem */
-            background: grey;
-            margin: 3.125rem; /* Margin set in rem */
-            border-radius: 0.625rem; /* Border radius in rem */
-            padding: 0.9375rem; /* Padding set in rem */
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: row;
-            justify-content: space-around;
-        }
+    width: 45rem; /* Width set in rem */
+    background: grey;
+    margin: 3.125rem; /* Margin set in rem */
+    border-radius: 0.625rem; /* Border radius in rem */
+    padding: 0.9375rem; /* Padding set in rem */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
 
-        .card {
-            margin: 0.625rem; /* Margin in rem */
-            border-radius: 0.625rem; /* Border radius in rem */
-            background: #282828;
-            width: calc(50% - 1.25rem); /* Half width with spacing accounted */
-            padding: 0.5rem; /* Padding in rem */
-            box-sizing: border-box;
-            color: #fff;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
+.card {
+    margin: 0.625rem; /* Margin in rem */
+    border-radius: 0.625rem; /* Border radius in rem */
+    background: #282828;
+    width: calc(50% - 1.25rem); /* Half width with spacing accounted */
+    height: 6rem; /* Fixed height for the cards */
+    padding: 0.5rem; /* Padding in rem */
+    box-sizing: border-box;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    overflow: hidden;
+}
 
-        .card img {
-            border-radius: 0.625rem 0.625rem 0 0; /* Rounded top corners */
-            width: 100%;
-            height: auto;
-            margin-bottom: 0.5rem; /* Margin below the image */
-        }
+.card-image {
+    height: 100%;
+    width: auto;
+    max-width: 35%;
+    border-radius: 0.625rem 0 0 0.625rem; /* Rounded left corners */
+}
 
-        .card h2 {
-            font-size: 1.5rem; /* Title font size in rem */
-            margin: 0.5rem 0; /* Margin around the title */
-        }
+.card-content {
+    padding-left: 0.5rem; /* Reduced space between image and content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 65%;
+}
 
-        .card p {
-            font-size: 1rem; /* Description font size in rem */
-            margin: 0.5rem 0; /* Margin around the paragraph */
-        }
+.card h2 {
+    font-size: 1rem; /* Smaller title font size in rem */
+    margin: 0.25rem 0; /* Smaller margin around the title */
+}
+
+.card p {
+    font-size: 0.75rem; /* Smaller description font size in rem */
+    margin: 0.25rem 0; /* Smaller margin around the paragraph */
+}
+
 
         .bio {
             font-size: 3.125rem; /* Bio font size in rem */
@@ -153,18 +163,26 @@
 
     <div class="card-menu">
         <!-- Card 1 -->
-        <div class="card">
-            <img src="image1.jpg" alt="Card Image 1">
-            <h2>Card Title 1</h2>
+       <div class="card">
+        <img src="star_icon.png" alt="Card Image 1" class="card-image">
+        <div class="card-content">
+            <h2 style="
+    text-align: center;
+">Card Title 1</h2>
             <p>This is the description for card 1. It provides some details about the content.</p>
         </div>
+    </div>
 
         <!-- Card 2 -->
         <div class="card">
-            <img src="image2.jpg" alt="Card Image 2">
-            <h2>Card Title 2</h2>
-            <p>This is the description for card 2. It gives an overview of what this card is about.</p>
+        <img src="star_icon.png" alt="Card Image 2" class="card-image">
+        <div class="card-content">
+            <h2 style="
+    text-align: center;
+">Card Title 1</h2>
+            <p>This is the description for card 2. It provides some details about the content.</p>
         </div>
+    </div>
 
         <!-- Spotify Embed (unchanged) -->
         <iframe style="padding:0;" class="card" src="https://open.spotify.com/embed/track/0zo4aX57COch7Wh3NRImTM?utm_source=generator&amp;theme=0" height="80" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
