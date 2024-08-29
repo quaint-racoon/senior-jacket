@@ -64,42 +64,43 @@
         }
 
         .card-menu {
-            width: 100%;
-            background: grey;
-            margin: 1rem 0;
-            border-radius: 0.625rem;
-            padding: 0.9375rem;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
+        width: 100%;
+        max-width: 750px; /* Set max width */
+        background: grey;
+        margin: 1rem 0;
+        border-radius: 0.625rem;
+        padding: 0.9375rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        box-sizing: border-box;
+    }
 
-        .card {
-            margin: 0.625rem;
-            border-radius: 0.625rem;
-            background: #282828;
-            width: calc(50% - 1.25rem);
-            height: 6rem;
-            display: flex;
-            align-items: center;
-            overflow: hidden;
-        }
+    .card {
+        margin: 0.625rem;
+        border-radius: 0.625rem;
+        background: #282828;
+        width: calc(50% - 1.25rem);
+        height: 6rem;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+    }
 
-        .card-image {
-            height: 100%;
-            width: auto;
-            max-width: 35%;
-            border-radius: 0.625rem 0 0 0.625rem;
-        }
+    .card-image {
+        height: 100%;
+        width: auto;
+        max-width: 35%;
+        border-radius: 0.625rem 0 0 0.625rem;
+    }
 
-        .card-content {
-            padding-left: 0.5rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align: center;
-            width: 65%;
-        }
+    .card-content {
+        padding-left: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        width: 65%;
 
         .card h2 {
             font-size: 1rem;
