@@ -278,8 +278,8 @@
             </div>
         </div>
         <!-- Card 3 -->
-        <div class="card">
-            <img src="coding.jpg" alt="coding icon!" class="card-image">
+        <div class="card" style="background-color:rgb(255, 148, 166)">
+            <img src="birthday cake.jpg" alt="cake icon!" class="card-image">
             <div class="card-content">
                 <h2>Birthday counter</h2>
                 <p id="birthdayCounter"></p>
@@ -315,7 +315,7 @@
     const secondsRemaining = Math.floor((timeDifference % (1000 * 60)) / 1000);
 
     const counterElement = document.getElementById("birthdayCounter");
-    counterElement.textContent = `Your birthday is in ${daysRemaining} days, ${hoursRemaining} hours, ${minutesRemaining} minutes, and ${secondsRemaining} seconds.`;
+    counterElement.textContent = `My birthday is in ${daysRemaining} days, ${hoursRemaining} hours, ${minutesRemaining} minutes, and ${secondsRemaining} seconds!`;
 
     setTimeout(birthdayCounter, 1000); // Update every second
 }
