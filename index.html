@@ -264,7 +264,7 @@
         <div class="card">
             <img src="ngl.png" alt="ngl icon" class="card-image">
             <div class="card-content">
-                <h2>my ngl link</h2>
+                <h2>My ngl link</h2>
                 <p>You can send me messages without me knowing who it is :0, here's the <a href="https://ngl.link/prly_hashem2" style=" color: blue;">link :)</a></p>
             </div>
         </div>
@@ -273,8 +273,16 @@
         <div class="card">
             <img src="coding.jpg" alt="coding icon!" class="card-image">
             <div class="card-content">
-                <h2>my coding journey</h2>
+                <h2>My coding journey</h2>
                 <p>I've been fascinated by coding as a child. Since 2017, my earning to learn has been fed by my passion and so I have come to learn HTML, CSS, JS, PHP, Python, and node.js</p>
+            </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="card">
+            <img src="coding.jpg" alt="coding icon!" class="card-image">
+            <div class="card-content">
+                <h2>Birthday counter</h2>
+                <p id="birthdayCounter"></p>
             </div>
         </div>
 
@@ -291,6 +299,28 @@
         function hideLoadingScreen() {
             document.getElementById('loading-screen').style.display = 'none';
         }
+        function birthdayCounter() {
+  var birthday = new Date(new Date().getFullYear(), 4, 29, 8, 40, 0); // Adjust year, month (0-11), day, hour, minute, and second as needed
+
+  var timeDifference = birthday - new Date();
+  if (timeDifference <= 0) {
+    // Birthday has already passed
+    birthday = new Date(new Date().getFullYear() + 1, 4, 29, 8, 40, 0);
+    timeDifference = birthday - new Date();
+  } 
+    // Birthday is in the future
+    const daysRemaining = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
+    const hoursRemaining = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutesRemaining = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+    const secondsRemaining = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+    const counterElement = document.getElementById("birthdayCounter");
+    counterElement.textContent = `Your birthday is in ${daysRemaining} days, ${hoursRemaining} hours, ${minutesRemaining} minutes, and ${secondsRemaining} seconds.`;
+
+    setTimeout(birthdayCounter, 1000); // Update every second
+}
+
+birthdayCounter();
     </script>
 </body>
 
