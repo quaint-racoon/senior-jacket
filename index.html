@@ -175,7 +175,23 @@
         .floating-icon.spin {
             animation: spin 20s infinite linear;
         }
+        .rainbow-text {
+  background-image: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #7f00ff, #ff00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  animation: rainbow 5s linear infinite;
+}
 
+@keyframes rainbow {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
         /* Mobile Optimization */
         @media (max-width: 768px) {
             .container {
@@ -250,13 +266,14 @@
 
     <!-- Main Content -->
     <div class="container">
-        <h1>Welcome to My Space!</h1>
+        <h1 class="rainbow-text">Welcome to My Space!</h1>
         <p class="bio">Hi, I'm quaint racoon. Welcome to my portfolio!</p>
         <p class="quote">"why fall in love when you can fall asleep."</p>
         <div class="social-icons">
             <a href="https://snapchat.com/add/prly_hashem" target="_blank"><img src="snapchat_icon.png" alt="Snapchat"></a>
             <a href="https://discord.com/users/755851493432754186" target="_blank"><img src="discord_icon.png" alt="Discord"></a>
             <a href="https://instagram.com/prly_hashem" target="_blank"><img src="instagram_icon.png" alt="Instagram"></a>
+            <a href="https://github.com/quaint-racoon" target="_blank"><img src="github_icon.png"></a>
         </div>
     </div>
     <div class="card-menu">
@@ -285,7 +302,14 @@
                 <p id="birthdayCounter"></p>
             </div>
         </div>
-
+        <!-- Card 4 -->
+        <div class="card" >
+            <img src="birthday cake.jpg" alt="cake icon!" class="card-image">
+            <div class="card-content">
+                <h2>Birthday counter</h2>
+                <p id="birthdayCounter"></p>
+            </div>
+        </div>
         <!-- Spotify Embed -->
         <iframe src="https://open.spotify.com/embed/track/0zo4aX57COch7Wh3NRImTM?utm_source=generator&amp;theme=0" height="80" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     </div>
