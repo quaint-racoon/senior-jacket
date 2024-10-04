@@ -180,7 +180,7 @@
         }
 
         .rainbow-text {
-            background-image: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #7f00ff, #ff00ff,#ff0000);
+            background-image: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #7f00ff, #ff00ff, #ff0000);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -197,6 +197,38 @@
             100% {
                 background-position: 110% 0%;
             }
+        }
+
+        .tooltip {
+            position: relative;
+        }
+
+        .tooltip .tooltiptext {
+            --width: 200px;
+            visibility: hidden;
+            width: var(--width);
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            padding: 5px 0;
+            border-radius: 6px;
+            position: absolute;
+            z-index: 1;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .typing {
+            color: #0000;
+            background: linear-gradient(-90deg, #00DFFC 5px, #0000 0) 10px 0, linear-gradient(#00DFFC 0 0) 0 0;
+            background-size: calc(var(--n)* 1ch) 200%;
+            -webkit-background-clip: padding-box, text;
+            background-clip: padding-box, text;
+            background-repeat: no-repeat;
+            animation: b .7s infinite steps(1), t calc(var(--n)* .1s) infinite steps(var(--n)) forwards;
+            word-break: break-word;
+            font-family: monospace;
         }
 
         /* Mobile Optimization */
@@ -318,8 +350,9 @@
         <div class="card">
             <img src="birthday cake.jpg" alt="cake icon!" class="card-image">
             <div class="card-content">
-                <h2>Birthday counter</h2>
-                <p id="birthdayCounter"></p>
+                <h2>who the actual <span class="tooltip">####<span class="tooltiptext">my mom hated the swearing
+                            🙂</span></span> is this guy?</h2>
+                <p class="typing" style="--n:105">just a random aah dude; whose no more interesting than a cucumber hoping to achieve something is his life</p>
             </div>
         </div>
         <!-- Spotify Embed -->
