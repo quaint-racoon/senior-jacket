@@ -17,11 +17,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            text-align:center;
-            z-index: 9999; /* Ensure it covers everything */
+            text-align: center;
+            z-index: 9999;
+            /* Ensure it covers everything */
             flex-direction: column;
             color: white;
-            font-size:2rem;
+            font-size: 2rem;
         }
 
         #loading-screen img {
@@ -66,44 +67,46 @@
         }
 
         .card-menu {
-        width: 100%;
-        max-width: 750px; /* Set max width */
-        background: grey;
-        margin: 1rem 0;
-        border-radius: 0.625rem;
-        padding: 0.9375rem;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        box-sizing: border-box;
-    }
+            width: 100%;
+            max-width: 750px;
+            /* Set max width */
+            background: grey;
+            margin: 1rem 0;
+            border-radius: 0.625rem;
+            padding: 0.9375rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            box-sizing: border-box;
+        }
 
-    .card {
-        margin: 0.625rem;
-        border-radius: 0.625rem;
-        background: #282828;
-        width: calc(50% - 1.25rem);
-        height: 6rem;
-        display: flex;
-        align-items: center;
-        overflow: hidden;
-    }
+        .card {
+            margin: 0.625rem;
+            border-radius: 0.625rem;
+            background: #282828;
+            width: calc(50% - 1.25rem);
+            height: 6rem;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
 
-    .card-image {
-        height: 100%;
-        width: auto;
-        max-width: 35%;
-        border-radius: 0.625rem 0 0 0.625rem;
-    }
+        .card-image {
+            height: 100%;
+            width: auto;
+            max-width: 35%;
+            border-radius: 0.625rem 0 0 0.625rem;
+        }
 
-    .card-content {
-        padding-left: 0.5rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        width: 65%;
-    }
+        .card-content {
+            padding-left: 0.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            width: 65%;
+        }
+
         .card h2 {
             font-size: 1rem;
             margin: 0.25rem 0;
@@ -138,7 +141,7 @@
 
         .social-icons img:hover {
             transform: scale(1.2);
-            box-shadow:#ffffff 1px 1px 20px 10px;
+            box-shadow: #ffffff 1px 1px 20px 10px;
         }
 
         .floating-icon {
@@ -175,6 +178,7 @@
         .floating-icon.spin {
             animation: spin 20s infinite linear;
         }
+
         .rainbow-text {
             background-image: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #7f00ff, #ff00ff);
             -webkit-background-clip: text;
@@ -182,16 +186,18 @@
             background-clip: text;
             color: transparent;
             animation: rainbow 5s linear infinite;
-}
+        }
 
-@keyframes rainbow {
-  0% {
-    background-position: 0% 0%;
-  }
-  100% {
-    background-position: 100% 0%;
-  }
-}
+        @keyframes rainbow {
+            0% {
+                background-position: 0% 0%;
+            }
+
+            100% {
+                background-position: 100% 0%;
+            }
+        }
+
         /* Mobile Optimization */
         @media (max-width: 768px) {
             .container {
@@ -270,9 +276,12 @@
         <p class="bio">Hi, I'm quaint racoon. Welcome to my portfolio!</p>
         <p class="quote">"why fall in love when you can fall asleep."</p>
         <div class="social-icons">
-            <a href="https://snapchat.com/add/prly_hashem" target="_blank"><img src="snapchat_icon.png" alt="Snapchat"></a>
-            <a href="https://discord.com/users/755851493432754186" target="_blank"><img src="discord_icon.png" alt="Discord"></a>
-            <a href="https://instagram.com/prly_hashem" target="_blank"><img src="instagram_icon.png" alt="Instagram"></a>
+            <a href="https://snapchat.com/add/prly_hashem" target="_blank"><img src="snapchat_icon.png"
+                    alt="Snapchat"></a>
+            <a href="https://discord.com/users/755851493432754186" target="_blank"><img src="discord_icon.png"
+                    alt="Discord"></a>
+            <a href="https://instagram.com/prly_hashem" target="_blank"><img src="instagram_icon.png"
+                    alt="Instagram"></a>
             <a href="https://github.com/quaint-racoon" target="_blank"><img src="github_icon.png"></a>
         </div>
     </div>
@@ -282,7 +291,8 @@
             <img src="ngl.png" alt="ngl icon" class="card-image">
             <div class="card-content">
                 <h2>My ngl link</h2>
-                <p>You can send me messages without me knowing who it is :0, here's the <a href="https://ngl.link/prly_hashem2" style=" color: blue;">link :)</a></p>
+                <p>You can send me messages without me knowing who it is :0, here's the <a
+                        href="https://ngl.link/prly_hashem2" style=" color: blue;">link :)</a></p>
             </div>
         </div>
 
@@ -291,7 +301,8 @@
             <img src="coding.jpg" alt="coding icon!" class="card-image">
             <div class="card-content">
                 <h2>My coding journey</h2>
-                <p>I've been fascinated by coding as a child. Since 2017, my earning to learn has been fed by my passion and so I have come to learn HTML, CSS, JS, PHP, Python, and node.js</p>
+                <p>I've been fascinated by coding as a child. Since 2017, my earning to learn has been fed by my passion
+                    and so I have come to learn HTML, CSS, JS, PHP, Python, and node.js</p>
             </div>
         </div>
         <!-- Card 3 -->
@@ -303,7 +314,7 @@
             </div>
         </div>
         <!-- Card 4 -->
-        <div class="card" >
+        <div class="card">
             <img src="birthday cake.jpg" alt="cake icon!" class="card-image">
             <div class="card-content">
                 <h2>Birthday counter</h2>
@@ -311,7 +322,9 @@
             </div>
         </div>
         <!-- Spotify Embed -->
-        <iframe src="https://open.spotify.com/embed/track/0zo4aX57COch7Wh3NRImTM?utm_source=generator&amp;theme=0" height="80" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe src="https://open.spotify.com/embed/track/0zo4aX57COch7Wh3NRImTM?utm_source=generator&amp;theme=0"
+            height="80" frameborder="0" allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     </div>
 
     <!-- Floating Icons -->
@@ -324,27 +337,27 @@
             document.getElementById('loading-screen').style.display = 'none';
         }
         function birthdayCounter() {
-  var birthday = new Date(new Date().getFullYear(), 4, 29, 8, 40, 0); // Adjust year, month (0-11), day, hour, minute, and second as needed
+            var birthday = new Date(new Date().getFullYear(), 4, 29, 8, 40, 0); // Adjust year, month (0-11), day, hour, minute, and second as needed
 
-  var timeDifference = birthday - new Date();
-  if (timeDifference <= 0) {
-    // Birthday has already passed
-    birthday = new Date(new Date().getFullYear() + 1, 4, 29, 8, 40, 0);
-    timeDifference = birthday - new Date();
-  } 
-    // Birthday is in the future
-    const daysRemaining = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
-    const hoursRemaining = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutesRemaining = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
-    const secondsRemaining = Math.floor((timeDifference % (1000 * 60)) / 1000);
+            var timeDifference = birthday - new Date();
+            if (timeDifference <= 0) {
+                // Birthday has already passed
+                birthday = new Date(new Date().getFullYear() + 1, 4, 29, 8, 40, 0);
+                timeDifference = birthday - new Date();
+            }
+            // Birthday is in the future
+            const daysRemaining = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
+            const hoursRemaining = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutesRemaining = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+            const secondsRemaining = Math.floor((timeDifference % (1000 * 60)) / 1000);
 
-    const counterElement = document.getElementById("birthdayCounter");
-    counterElement.textContent = `My birthday is in ${daysRemaining} days, ${hoursRemaining} hours, ${minutesRemaining} minutes, and ${secondsRemaining} seconds!`;
+            const counterElement = document.getElementById("birthdayCounter");
+            counterElement.textContent = `My birthday is in ${daysRemaining} days, ${hoursRemaining} hours, ${minutesRemaining} minutes, and ${secondsRemaining} seconds!`;
 
-    setTimeout(birthdayCounter, 1000); // Update every second
-}
+            setTimeout(birthdayCounter, 1000); // Update every second
+        }
 
-birthdayCounter();
+        birthdayCounter();
     </script>
 </body>
 
