@@ -340,11 +340,11 @@
         <p class="bio">Hi, I'm quaint racoon. Welcome to my portfolio!</p>
         <p class="quote">"why fall in love when you can fall asleep."</p>
         <div class="social-icons">
-            <a href="https://snapchat.com/add/prly_hashem" target="_blank"><img src="snapchat_icon.png"
+            <a href="https://snapchat.com/add/hashem.yea" target="_blank"><img src="snapchat_icon.png"
                     alt="Snapchat"></a>
             <a href="https://discord.com/users/755851493432754186" target="_blank"><img src="discord_icon.png"
                     alt="Discord"></a>
-            <a href="https://instagram.com/prly_hashem" target="_blank"><img src="instagram_icon.png"
+            <a href="https://instagram.com/0t00m3" target="_blank"><img src="instagram_icon.png"
                     alt="Instagram"></a>
             <a href="https://github.com/quaint-racoon" target="_blank"><img src="github_icon.jpg" alt="github"></a>
         </div>
@@ -356,7 +356,7 @@
             <div class="card-content">
                 <h2>My ngl link</h2>
                 <p>You can send me messages without me knowing who it is :0, here's the <a
-                        href="https://ngl.link/prly_hashem2" style=" color: blue;">link :)</a></p>
+                        href="https://ngl.link/hashem74568" style=" color: blue;">link :)</a></p>
             </div>
         </div>
 
@@ -404,15 +404,15 @@
             document.getElementById('loading-screen').style.display = 'none';
         }
         function birthdayCounter() {
-            var birthday = new Date(new Date().getFullYear(), 4, 29, 8, 40, 0); // Adjust year, month (0-11), day, hour, minute, and second as needed
+            var birthday = new Date(new Date().getFullYear(), 4, 29, 8, 40, 0); 
 
             var timeDifference = birthday - new Date();
             if (timeDifference <= 0) {
-                // Birthday has already passed
+                
                 birthday = new Date(new Date().getFullYear() + 1, 4, 29, 8, 40, 0);
                 timeDifference = birthday - new Date();
             }
-            // Birthday is in the future
+            
             const daysRemaining = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
             const hoursRemaining = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutesRemaining = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
@@ -421,7 +421,7 @@
             const counterElement = document.getElementById("birthdayCounter");
             counterElement.textContent = `My birthday is in ${daysRemaining} days, ${hoursRemaining} hours, ${minutesRemaining} minutes, and ${secondsRemaining} seconds!`;
 
-            setTimeout(birthdayCounter, 1000); // Update every second
+            setTimeout(birthdayCounter, 1000); 
         }
 
         birthdayCounter();
